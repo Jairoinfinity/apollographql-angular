@@ -1,0 +1,34 @@
+<div>
+    <button type="button" class="btn btn-success" (click)="showData()">Show all users</button>
+    <div class="container">
+        <div class="row">
+            <div *ngFor="let item of userData" class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">First name: {{item.firstname}}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Last Name: {{item.lastname}}</h6>
+                    <h6 class="card-subtitle mb-2 text-muted">Age: {{item.age}}</h6>
+                    <button type="button" class="btn btn-warning" (click)="showFromData(item)">Edit</button>
+                    <button type="button" class="btn btn-danger" (click)="deleteUser(item._id)">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <div *ngIf="showForm" class="container">
+    <hr>
+    <form [formGroup]="formGroup">
+        <div class="form-group">
+          <label>First name</label>
+          <input type="text" class="form-control" formControlName="firstname" aria-describedby="emailHelp">
+        </div>
+        <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" class="form-control" formControlName="surname" aria-describedby="emailHelp">
+          </div>
+          <div class="form-group">
+            <label>Age</label>
+            <input type="number" class="form-control" formControlName="ageData" aria-describedby="emailHelp">
+          </div>
+        <button type="button" class="btn btn-primary" (click)="editUser()">Edit</button>
+      </form>
+</div> -->
